@@ -1,0 +1,12 @@
+schema:
+  - https://countries.trevorblades.com/
+generates:
+  'schema.graphql':
+    plugins:
+      - schema-ast
+    config:
+      includeDirectives: true
+      includeIntrospectionTypes: true  
+hooks:
+  afterAllFileWrite:
+    - prettier --write
